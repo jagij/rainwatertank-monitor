@@ -66,7 +66,7 @@ Adafruit_MQTT_Publish test = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/feeds/"
 void setup() {
   pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
   pinMode(echoPin, INPUT); // Sets the echoPin as an Input
-  Serial.begin(9600); // Starts the serial communication
+  Serial.begin(115200); // Starts the serial communication
   delay(10);
 
   Serial.println(F("Post rain water well sensor data to Adafruit IO"));
