@@ -232,15 +232,10 @@ void verifyFingerprint() {
   Serial.print("Connecting to ");
   Serial.println(host);
 
+  client.setFingerprint(fingerprint);
+
   if (! client.connect(host, AIO_SERVERPORT)) {
     Serial.println("Connection failed. Halting execution.");
-    while(1);
-  }
-
-  if (client.verify(fingerprint, host)) {
-    Serial.println("Connection secure.");
-  } else {
-    Serial.println("Connection insecure! Halting execution.");
     while(1);
   }
 
